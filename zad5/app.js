@@ -12,7 +12,7 @@ function requestListener(request, response) {
     response.setHeader("Content-Type", "text/html");
     response.write("<html>");
     response.write("<head><title>About student</title></head>");
-    response.write(`<body>My name is ${FULLNAME}. My student ID is ${STUDENT_ID}</body>`);
+    response.write(`<body><p>My name is ${FULLNAME}. My student ID is ${STUDENT_ID}</p></body>`);
     response.write("<html>");
     response.end();
     console.log("RequestListener", response);
