@@ -10,7 +10,8 @@ const PORT = 3000;
 
 const server = http.createServer();
 
-server.listen(PORT);
+server.listen(PORT, () => {
+    console.log(`Server is running on ${PORT}`);
+});
 
-console.log(`Server is running on ${PORT}`);
 console.log(`My name is ${FULLNAME}. My student ID is ${STUDENT_ID}`);
