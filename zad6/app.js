@@ -1,6 +1,6 @@
 const student = require("./student");
 
-const id = 3;
+const id = 0;
 
 const FULLNAME = student.getStudentFullName(id);
 
@@ -17,9 +17,10 @@ function requestListener(request, response) {
     response.write(`<body>My name is ${FULLNAME}. My student ID is ${STUDENT_ID}</body>`);
     response.write("<html>");
     response.end();
-    console.log("RequestListener", response);
 }
 
 const server = http.createServer(requestListener);
 
-server.listen(PORT);
+server.listen(PORT, () => {
+  console.log(`Server is running on ${PORT}`);
+});
